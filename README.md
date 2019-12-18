@@ -57,3 +57,8 @@ Its quiet simple, just using the docker CLI to access the Docker daemon socket o
     docker ps
     docker images
     ```
+
+## Related projects
+
+* [dind](https://github.com/jpetazzo/dind)
+* [Official docker image](https://github.com/docker-library/docker)
