@@ -14,8 +14,10 @@ RUN apt-get update && \
     add-apt-repository \
         "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
         $(lsb_release -cs) \
-        stable"
+        stable" && \
+    rm -rf /var/lib/apt/lists/*
 
-# Install Docker CLI
+# Install Docker CLI and remove apt cache
 RUN apt-get update && \
-    apt-get install -y docker-ce-cli
+    apt-get install -y docker-ce-cli && \
+    rm -rf /var/lib/apt/lists/*
